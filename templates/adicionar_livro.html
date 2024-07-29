@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Adicionar Novo Livro</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.isbn.label }} {{ form.isbn() }}<br>
+    {{ form.titulo.label }} {{ form.titulo() }}<br>
+    {{ form.autor.label }} {{ form.autor() }}<br>
+    {{ form.ano_publicacao.label }} {{ form.ano_publicacao() }}<br>
+    {{ form.editora.label }} {{ form.editora() }}<br>
+    {{ form.submit() }}
+</form>
+<a href="{{ url_for('lista_livros') }}">Voltar à Lista de Livros</a>
+{% endblock %}

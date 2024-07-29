@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ livro.titulo }}</h1>
+<p><strong>Autor:</strong> {{ livro.autor }}</p>
+<p><strong>Ano de Publicação:</strong> {{ livro.ano_publicacao }}</p>
+<p><strong>Editora:</strong> {{ livro.editora }}</p>
+<h2>Avaliar Livro</h2>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.nota.label }} {{ form.nota() }}
+    {{ form.submit() }}
+</form>
+<a href="{{ url_for('lista_livros') }}">Voltar à Lista de Livros</a>
+{% endblock %}

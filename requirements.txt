@@ -1,0 +1,10 @@
+# Require Python 3.12.4
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-WTF
+Flask-Login
+pandas
+scikit-learn
+psycopg2
+python-dotenv
