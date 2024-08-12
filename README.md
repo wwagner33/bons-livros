@@ -172,8 +172,6 @@ cross_validate(algo, data, measures=['RMSE', 'MAE'], cv=5, verbose=True)
 - **Coursera e Udemy:** Cursos sobre sistemas de recomendação com implementação prática.
 - **Artigos do IEEE:** Publicações científicas com as últimas novidades na área.
 
-Se precisar de mais detalhes ou de uma implementação específica, me avise!
-
 ## Licença
 
 Este projeto está licenciado sob a Licença GPLv3.
