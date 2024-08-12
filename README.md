@@ -2,13 +2,66 @@
 
 Este projeto é um sistema de recomendação de livros construído com Flask. Ele permite que os usuários se cadastrem, respondam a perguntas para indicar suas preferências e recebam recomendações de livros. Os usuários também podem avaliar livros e adicionar novos livros ao sistema.
 
-## Funcionalidades
+O sistema de recomendação da aplicação foi projetado para sugerir livros aos usuários com base em suas preferências iniciais e nas avaliações que eles fazem de livros ao longo do tempo. Vamos detalhar como esse sistema funciona, quais algoritmos são usados e como eles são aplicados na prática.
+
+## Objetivo do Sistema de Recomendação
+O objetivo principal do sistema de recomendação é sugerir livros aos usuários de acordo com seus interesses e preferências pessoais. Isso é feito em duas etapas principais:
+
+## Recomendação Inicial
+
+1. Quando um usuário se cadastra pela primeira vez, ele pode fornecer preferências iniciais (como gêneros ou temas de interesse). Com base nessas preferências, o sistema sugere um ou mais livros que podem ser de interesse do usuário.
+Recomendações Baseadas em Avaliações:
+
+2. À medida que o usuário avalia os livros que leu, o sistema ajusta suas recomendações futuras com base nessas avaliações. Livros que receberam boas avaliações de usuários com preferências semelhantes são recomendados.
+
+## Algoritmos Utilizados
+
+Dois algoritmos principais de Machine Learning são usados para implementar esse sistema de recomendação.
+
+### Árvore de Decisão (Decision Tree) para Recomendação Inicial
+
+A árvore de decisão é um algoritmo de aprendizado supervisionado usado para classificação e regressão. Ele funciona criando um modelo que prevê o valor de uma variável-alvo com base em várias variáveis de entrada. No contexto desta aplicação, a árvore de decisão é utilizada para classificar e sugerir um livro inicial com base nas respostas do usuário a um questionário inicial sobre suas preferências.
+
+#### Funcionamento
+
+* O usuário responde a algumas perguntas iniciais (por exemplo, gênero preferido, autor favorito, etc.).
+* As respostas do usuário são convertidas em um vetor de características (features).
+* A árvore de decisão processa esse vetor de características e seleciona o livro que melhor corresponde às preferências do usuário.
+
+### K-Nearest Neighbors (KNN) para Recomendações Baseadas em Avaliações
+
+K-Nearest Neighbors (KNN) é um algoritmo de aprendizado supervisionado utilizado para classificação e regressão. Ele funciona encontrando os k exemplos mais próximos no conjunto de dados e usando esses exemplos para fazer previsões. No contexto desta aplicação, o KNN é utilizado para recomendar livros com base nas avaliações que o usuário forneceu para livros anteriores.
+
+#### Funcionamento
+
+* Cada vez que o usuário avalia um livro, essas avaliações são registradas e armazenadas no banco de dados.
+* O algoritmo KNN analisa essas avaliações e encontra usuários semelhantes (ou seja, usuários que avaliaram livros de maneira semelhante).
+* Com base nas avaliações de outros usuários semelhantes, o KNN recomenda livros que esses usuários gostaram, mas que o usuário atual ainda não leu.
+
+## Funcionalidades do sistema
 
 - Cadastro de usuários com perguntas de preferências
 - Recomendação inicial de livros usando árvore de decisão
 - Avaliação de livros pelos usuários
 - Adição de novos livros pelos usuários
 - Recomendação baseada em avaliações dos usuários
+
+
+## Fluxo do Sistema
+
+1. Cadastro do Usuário
+
+O usuário se cadastra no sistema e responde a um questionário inicial sobre suas preferências.
+Com base nas respostas, a árvore de decisão recomenda um ou mais livros iniciais.
+
+2. Interação Contínua
+
+À medida que o usuário lê e avalia os livros recomendados, o sistema registra essas avaliações.
+O algoritmo KNN utiliza essas avaliações para ajustar as recomendações futuras, tornando-as mais precisas e personalizadas ao longo do tempo.
+
+3. Adição de Novos Livros
+
+Os usuários podem adicionar novos livros ao sistema, enriquecendo o banco de dados e melhorando as recomendações para outros usuários.
 
 ## Tecnologias
 
