@@ -1,9 +1,12 @@
 import pandas as pd
+import os as os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
 # Load and preprocess dataset
-books = pd.read_csv('../data/processed/processed_dataset.csv')
+dirname = os.path.dirname(__file__)
+filetname = os.path.join(dirname, '../data/dataset.csv')
+books = pd.read_csv(filetname)
 
 # Fit the TF-IDF Vectorizer
 tfidf = TfidfVectorizer(stop_words='english')

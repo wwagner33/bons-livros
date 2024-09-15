@@ -1,0 +1,6 @@
+book_id,title,author,genre,rating,ratings_count,description
+1,Harry Potter and the Philosopher's Stone,J.K. Rowling,Fantasy,4.8,12000,A young boy discovers he is a wizard and attends a magical school.
+2,The Hobbit,J.R.R. Tolkien,Fantasy,4.7,8500,A hobbit embarks on a journey to help dwarves reclaim their home.
+3,1984,George Orwell,Dystopian,4.6,9500,A dystopian society where the government watches everything.
+4,The Catcher in the Rye,J.D. Salinger,Literary Fiction,4.2,5000,A troubled young man navigates teenage angst in New York.
+5,Pride and Prejudice,Jane Austen,Romance,4.5,8000,A story of love and societal expectations in 19th century England.
